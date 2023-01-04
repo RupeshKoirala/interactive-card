@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./assets/images/favicon-32x32.png" type="image/png">
+        <link rel="stylesheet" href="./style/style.css">
+        <title>Interactive card</title>
+    </head>
+    <body>
+        <main>
+            <section class="card-img">
+                <div class="card-front">
+                    <img src="./assets/images/card-logo.svg" alt="Logo de la carte bancaire" id="card-logo">
+                    <p class="card-number">0000 0000 0000 0000</p>
+                    <div class="pos-card-front-name-date">
+                        <p id="card-name-txt">Jane Appleseed</p>
+                        <div class="card-date">
+                            <p id="card-date-month-txt">00/</p>
+                            <p id="card-date-year-txt">00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p id="card-back-cvc">000</p>
+                </div>
+            </section>
+            
+            <form action="">
+                <label for="card-name">Cardholder Name</label>
+                <input type="text" id="card-name" placeholder="e.g. Jane Appleseed" maxlength="32">
+
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+
+                <div class="card-date-and-cvc">
+                    <div class="pos-card-date">
+                        <label for="card-date-MM">Exp. Date (MM/YY)</label>
+                        <div class="pos-inputs-card-date">
+                            <input type="text" id="card-date-MM" placeholder="MM" maxlength="2">
+                            <input type="text" id="card-date-YY" placeholder="YY" maxlength="2">
+                        </div>
+                    </div>
+                    
+                    <div class="pos-card-cvc">
+                        <label for="card-cvc">CVC</label>
+                        <input type="text" id="card-cvc" placeholder="e.g. 123" maxlength="3">
+                    </div>
+                </div>
+
+                <button>Confirm</button>
+            </form>
+
+            <section class="paymentSuccess">
+                <img src="./assets/images/icon-complete.svg" alt="Icone de validation">
+                <h2>Thank you!</h2>
+                <p class="paraSuccess">We've added your card details</p>
+                <button id="btn-continue">Continue</button>
+            </section>
+        </main>
+        <script src="./script/main.js"></script>
+    </body>
+</html>
